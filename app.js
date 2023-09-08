@@ -1,21 +1,21 @@
 // Function to update the current day of the week in Nigeria (WAT time zone)
 function updateCurrentDayOfTheWeek() {
-	const daysOfWeek = [
-		'Sunday',
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday',
-	];
-	const currentDate = new Date();
-	const options = { weekday: 'long', timeZone: 'Africa/Lagos' }; // Nigeria's time zone
-	const currentDay = new Intl.DateTimeFormat('en-US', options).format(
-		currentDate
-	);
-	document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
-		currentDay;
+    const daysOfWeek = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+    ];
+    const currentDate = new Date();
+    const options = { weekday: 'long', timeZone: 'Africa/Lagos' }; // Nigeria's time zone
+    const currentDay = new Intl.DateTimeFormat('en-US', options).format(
+        currentDate
+    );
+    document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent =
+        currentDay;
 }
 
 // Initial update
@@ -26,12 +26,12 @@ setInterval(updateCurrentDayOfTheWeek, 86400000);
 
 // Function to update the current local time in Nigeria (WAT time zone)
 function updateCurrentLocalTime() {
-	const currentDate = new Date();
-	const options = { timeZone: 'Africa/Lagos' }; // Nigeria's time zone
-	const localTime = currentDate.toLocaleTimeString('en-US', options);
-	const utcTimeMilliseconds = currentDate.getTime(); // Get UTC time in milliseconds
-	document.querySelector('[data-testid="currentUTCTime"]').textContent =
-		'Local Time: ' + localTime + ' | UTC Time (ms): ' + utcTimeMilliseconds;
+    const currentDate = new Date();
+    const options = { timeZone: 'Africa/Lagos' }; // Nigeria's time zone
+    const localTime = currentDate.toLocaleTimeString('en-US', options);
+    const utcTimeMilliseconds = currentDate.getTime(); // Get UTC time in milliseconds
+    document.querySelector('[data-testid="currentUTCTime"]').textContent =
+        'Local Time: ' + localTime + ' | UTC Time (ms): ' + utcTimeMilliseconds;
 }
 
 // Initial update
