@@ -22,11 +22,13 @@
 .profile .image img{
     width: 100%;
     border-radius: 20px;
+    height: 300px;
 }
 .main-container .grid{
     display: flex;
-    gap: 10px;
+    gap: 7px;
     font-size: 15px;
+    padding-left: 2px;
 }
 .main-container .grid a{
     color: blue;
